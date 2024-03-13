@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Database" Label="Data Source=DESKTOP-KD3V6G8\SQLEXPRESS01;Initial Catalog=BashirHistory;Integrated Security=True" Category="Database" Group="Expanded" />
+    <Node Id="dbo" Label="dbo" Category="Schema" Group="Expanded" />
+    <Node Id="dbo.category" Label="dbo.category" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.category_catID" Label="catID" Category="Field Primary" Description="int" />
+    <Node Id="dbo.category_catName" Label="catName" Category="Field Optional" Description="nvarchar(50)" />
+    <Node Id="dbo.products" Label="dbo.products" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.products_pID" Label="pID" Category="Field Primary" Description="int" />
+    <Node Id="dbo.products_pName" Label="pName" Category="Field Optional" Description="nvarchar(50)" />
+    <Node Id="dbo.products_pPrice" Label="pPrice" Category="Field Optional" Description="float" />
+    <Node Id="dbo.products_CategoryID" Label="CategoryID" Category="Field Optional" Description="int" />
+    <Node Id="dbo.products_pImage" Label="pImage" Category="Field Optional" Description="image" />
+    <Node Id="dbo.sysdiagrams" Label="dbo.sysdiagrams" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.sysdiagrams_name" Label="name" Category="Field" Description="nvarchar(128)" />
+    <Node Id="dbo.sysdiagrams_principal_id" Label="principal_id" Category="Field" Description="int" />
+    <Node Id="dbo.sysdiagrams_diagram_id" Label="diagram_id" Category="Field Primary" Description="int" />
+    <Node Id="dbo.sysdiagrams_version" Label="version" Category="Field Optional" Description="int" />
+    <Node Id="dbo.sysdiagrams_definition" Label="definition" Category="Field Optional" Description="image" />
+    <Node Id="dbo.tblDetails" Label="dbo.tblDetails" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.tblDetails_DetailID" Label="DetailID" Category="Field Primary" Description="int" />
+    <Node Id="dbo.tblDetails_MainID" Label="MainID" Category="Field Optional" Description="int" />
+    <Node Id="dbo.tblDetails_proID" Label="proID" Category="Field Optional" Description="int" />
+    <Node Id="dbo.tblDetails_qty" Label="qty" Category="Field Optional" Description="int" />
+    <Node Id="dbo.tblDetails_price" Label="price" Category="Field Optional" Description="float" />
+    <Node Id="dbo.tblDetails_amount" Label="amount" Category="Field Optional" Description="float" />
+    <Node Id="dbo.tbMain" Label="dbo.tbMain" Category="Table" Group="Collapsed" />
+    <Node Id="dbo.tbMain_MainID" Label="MainID" Category="Field Primary" Description="int" />
+    <Node Id="dbo.tbMain_aDate" Label="aDate" Category="Field Optional" Description="datetime" />
+    <Node Id="dbo.tbMain_aTime" Label="aTime" Category="Field Optional" Description="nvarchar(15)" />
+    <Node Id="dbo.tbMain_status" Label="status" Category="Field Optional" Description="nvarchar(15)" />
+    <Node Id="dbo.tbMain_orderType" Label="orderType" Category="Field Optional" Description="nvarchar(15)" />
+    <Node Id="dbo.tbMain_total" Label="total" Category="Field Optional" Description="float" />
+    <Node Id="dbo.tbMain_received" Label="received" Category="Field Optional" Description="float" />
+    <Node Id="dbo.tbMain_change" Label="change" Category="Field Optional" Description="float" />
+    <Node Id="dbo.tbMain_CustName" Label="CustName" Category="Field Optional" Description="nvarchar(50)" />
+    <Node Id="dbo.tbMain_CustPhone" Label="CustPhone" Category="Field Optional" Description="nvarchar(20)" />
+    <Node Id="dbo.tbMain_CustAddress" Label="CustAddress" Category="Field Optional" Description="nvarchar(255)" />
+    <Node Id="dbo.tbMain_deliverycharges" Label="deliverycharges" Category="Field Optional" Description="float" />
+  </Nodes>
+  <Links>
+    <Link Source="Database" Target="dbo" Category="Contains" />
+    <Link Source="dbo" Target="dbo.category" Category="Contains" />
+    <Link Source="dbo.category" Target="dbo.category_catID" Category="Contains" />
+    <Link Source="dbo.category" Target="dbo.category_catName" Category="Contains" />
+    <Link Source="dbo" Target="dbo.products" Category="Contains" />
+    <Link Source="dbo.products" Target="dbo.products_pID" Category="Contains" />
+    <Link Source="dbo.products" Target="dbo.products_pName" Category="Contains" />
+    <Link Source="dbo.products" Target="dbo.products_pPrice" Category="Contains" />
+    <Link Source="dbo.products" Target="dbo.products_CategoryID" Category="Contains" />
+    <Link Source="dbo.products" Target="dbo.products_pImage" Category="Contains" />
+    <Link Source="dbo" Target="dbo.sysdiagrams" Category="Contains" />
+    <Link Source="dbo.sysdiagrams" Target="dbo.sysdiagrams_name" Category="Contains" />
+    <Link Source="dbo.sysdiagrams" Target="dbo.sysdiagrams_principal_id" Category="Contains" />
+    <Link Source="dbo.sysdiagrams" Target="dbo.sysdiagrams_diagram_id" Category="Contains" />
+    <Link Source="dbo.sysdiagrams" Target="dbo.sysdiagrams_version" Category="Contains" />
+    <Link Source="dbo.sysdiagrams" Target="dbo.sysdiagrams_definition" Category="Contains" />
+    <Link Source="dbo" Target="dbo.tblDetails" Category="Contains" />
+    <Link Source="dbo.tblDetails" Target="dbo.tblDetails_DetailID" Category="Contains" />
+    <Link Source="dbo.tblDetails" Target="dbo.tblDetails_MainID" Category="Contains" />
+    <Link Source="dbo.tblDetails" Target="dbo.tblDetails_proID" Category="Contains" />
+    <Link Source="dbo.tblDetails" Target="dbo.tblDetails_qty" Category="Contains" />
+    <Link Source="dbo.tblDetails" Target="dbo.tblDetails_price" Category="Contains" />
+    <Link Source="dbo.tblDetails" Target="dbo.tblDetails_amount" Category="Contains" />
+    <Link Source="dbo" Target="dbo.tbMain" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_MainID" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_aDate" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_aTime" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_status" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_orderType" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_total" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_received" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_change" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_CustName" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_CustPhone" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_CustAddress" Category="Contains" />
+    <Link Source="dbo.tbMain" Target="dbo.tbMain_deliverycharges" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Table" ValueLabel="True">
+      <Condition Expression="HasCategory('Table')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schema" ValueLabel="True">
+      <Condition Expression="HasCategory('Schema')" />
+      <Setter Property="Background" Value="#FF7F9169" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Field Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="True">
+      <Condition Expression="HasCategory('Field')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Database" ValueLabel="True">
+      <Condition Expression="HasCategory('Database')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
